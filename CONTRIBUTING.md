@@ -54,7 +54,7 @@ uv run pytest
 ## Coding style
 The `Coding style validation` action will fail if the pre-commit checks do not pass. To make sure that these are checked automatically on push, run:
 ```sh
-pre-commit install --hook-type pre-commit
+uv run pre-commit install --hook-type pre-commit
 ```
 
 Our pre-commit configuration includes several automated checks:
@@ -66,11 +66,11 @@ Our pre-commit configuration includes several automated checks:
 
 To run the pre-commit checks on specific files:
 ```bash
-pre-commit run --files <files>
+uv run pre-commit run --files <files>
 ```
 Or all files:
 ```bash
-pre-commit run --all-files
+uv run pre-commit run --all-files
 ```
 
 If for some reason you really want to ignore them during commit/push, add `--no-verify`.
@@ -238,10 +238,10 @@ We follow a [Git feature branch](https://www.atlassian.com/git/tutorials/compari
 Principles:
 - The basic workflow is as follows:
   1. Open an issue for the feature to implement, and describe in detail the goal of the feature. Describe the tests that should pass for the feature to be considered implemented.
-  2. Open a branch from `dev` for the feature:
+  2. Open a branch from `dev` and publish it to the remote:
     ```bash
-    git checkout dev
-    git checkout -b feature-<issue-number>
+    git checkout -b feature-<issue-number> origin/dev
+    git push -u origin HEAD
     ```
   3. Add the tests; see [Testing](#testing-a-feature).
   4. Implement the feature and make sure the tests pass.
