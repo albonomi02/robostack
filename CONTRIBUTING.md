@@ -240,6 +240,7 @@ Principles:
   1. Open an issue for the feature to implement, and describe in detail the goal of the feature. Describe the tests that should pass for the feature to be considered implemented.
   2. Open a branch from `dev` and publish it to the remote:
     ```bash
+    git fetch origin
     git checkout -b feature-<issue-number> origin/dev
     git push -u origin HEAD
     ```
