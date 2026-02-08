@@ -5,19 +5,25 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "robostack"
 version = "0.1.0"
-description = "Template for research code"
-readme = "README.md"
-license = { file = "LICENSE" }
-urls = { Homepage = "https://github.com/antonioterpin/robostack" }
 authors = [
     { name = "Antonio Terpin", email = "aterpin@ethz.ch" },
 ]
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: Apache-2.0 License",
-  "Operating System :: OS Independent",
-]
+description = "Template for research code"
+readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["robotics", "template", "jax"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 
 # Core dependencies
 dependencies = [
@@ -32,6 +38,12 @@ dependencies = [
     "wandb>=0.20.1",
     "portal>=0.1.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/antonioterpin/robostack"
+Repository = "https://github.com/antonioterpin/robostack"
+Documentation = "https://github.com/antonioterpin/robostack#readme"
+Issues = "https://github.com/antonioterpin/robostack/issues"
 
 # Optional dependencies
 [project.optional-dependencies]
